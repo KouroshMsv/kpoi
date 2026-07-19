@@ -51,21 +51,18 @@ Each module only pulls in what it needs; depend on the ones you use.
 
 ## Installation
 
-Not yet on Maven Central — for now, build locally:
-
-```bash
-./gradlew publishToMavenLocal
-```
-
 ```kotlin
-repositories { mavenLocal(); mavenCentral() }
+repositories { mavenCentral() }
 
 dependencies {
-    implementation("io.github.kouroshmsv:kpoi-spreadsheet:0.1.0-SNAPSHOT")
-    implementation("io.github.kouroshmsv:kpoi-word:0.1.0-SNAPSHOT")
-    implementation("io.github.kouroshmsv:kpoi-slides:0.1.0-SNAPSHOT")
+    implementation("io.github.kouroshmsv:kpoi-spreadsheet:0.1.0")
+    implementation("io.github.kouroshmsv:kpoi-word:0.1.0")
+    implementation("io.github.kouroshmsv:kpoi-slides:0.1.0")
 }
 ```
+
+The first release is on its way to Maven Central; until it propagates you can
+build from source with `./gradlew publishToMavenLocal` and `mavenLocal()`.
 
 ## Spreadsheets (`kpoi-spreadsheet`)
 
