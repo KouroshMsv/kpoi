@@ -65,9 +65,6 @@ dependencies {
 }
 ```
 
-The first release is on its way to Maven Central; until it propagates you can
-build from source with `./gradlew publishToMavenLocal` and `mavenLocal()`.
-
 ## Spreadsheets (`kpoi-spreadsheet`)
 
 ### Writing
