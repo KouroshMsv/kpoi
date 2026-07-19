@@ -21,3 +21,5 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
       - name: Build and test
         run: ./gradlew build
+      - name: Run samples end to end
+        run: ./gradlew :samples:run

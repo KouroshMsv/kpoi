@@ -37,6 +37,8 @@ It builds **on top of** POI's public API — every builder exposes the underlyin
 kpoi is young (0.x): the DSL surface may still grow and shift until 1.0, so pin your
 version. Since raw POI is always exposed, nothing the DSL doesn't cover can block you.
 
+API reference: **[kouroshmsv.github.io/kpoi](https://kouroshmsv.github.io/kpoi/)**
+
 ## Modules
 
 | Module             | Wraps                          | Use it for                     |
@@ -75,7 +77,7 @@ dependencies {
 ### Writing
 
 ```kotlin
-import dev.kpoi.spreadsheet.*
+import io.github.kouroshmsv.kpoi.spreadsheet.*
 
 val workbook = workbook {                    // XSSFWorkbook; also: xlsWorkbook {}, streamingWorkbook {}
     val money = style { format = "#,##0.00" }
@@ -118,7 +120,7 @@ cell.displayString()                          // exactly as Excel renders it
 ## Word (`kpoi-word`)
 
 ```kotlin
-import dev.kpoi.word.*
+import io.github.kouroshmsv.kpoi.word.*
 
 docx(Path.of("letter.docx")) {
     heading("Quarterly Letter", level = 1)
@@ -143,7 +145,7 @@ docx(Path.of("letter.docx")) {
 ## PowerPoint (`kpoi-slides`)
 
 ```kotlin
-import dev.kpoi.slides.*
+import io.github.kouroshmsv.kpoi.slides.*
 
 pptx(Path.of("deck.pptx")) {
     widescreen()
@@ -173,8 +175,7 @@ pptx(Path.of("deck.pptx")) {
 - Word heading/style templates and numbered lists
 - Cell comments, images, and conditional formatting in spreadsheets
 - Slide tables and notes
-- Convention-plugin build and Maven Central publishing
-- Dokka API docs
+- Convention-plugin build
 
 ## Samples
 
