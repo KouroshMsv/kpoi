@@ -3,7 +3,7 @@ kotlin = "2.4.10"
 poi = "5.5.1"
 # JUnit 5.x line: the last one that runs on Java 11, matching the library's baseline.
 junit = "5.14.4"
-junit-platform = "1.14.4"
+junit-platform = "6.1.2"
 log4j = "2.26.1"
 
 [libraries]
