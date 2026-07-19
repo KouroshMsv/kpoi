@@ -18,4 +18,5 @@ include(
     "kpoi-spreadsheet",
     "kpoi-word",
     "kpoi-slides",
+    "samples",
 )

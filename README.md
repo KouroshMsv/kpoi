@@ -1,6 +1,7 @@
 # kpoi — a Kotlin DSL for Apache POI
 
 [![build](https://github.com/KouroshMsv/kpoi/actions/workflows/build.yml/badge.svg)](https://github.com/KouroshMsv/kpoi/actions/workflows/build.yml)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.kouroshmsv/kpoi-spreadsheet)](https://central.sonatype.com/search?namespace=io.github.kouroshmsv)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 
 Type-safe, concise Kotlin builders for the three big [Apache POI](https://poi.apache.org/) document
@@ -31,6 +32,9 @@ xlsx(Path.of("report.xlsx")) {
 kpoi is an independent community project, not a product of the Apache Software Foundation.
 It builds **on top of** POI's public API — every builder exposes the underlying POI object
 (`poiWorkbook`, `poiSheet`, `poiRun`, …), so you can always drop down to the full API.
+
+kpoi is young (0.x): the DSL surface may still grow and shift until 1.0, so pin your
+version. Since raw POI is always exposed, nothing the DSL doesn't cover can block you.
 
 ## Modules
 
@@ -169,6 +173,14 @@ pptx(Path.of("deck.pptx")) {
 - Slide tables and notes
 - Convention-plugin build and Maven Central publishing
 - Dokka API docs
+
+## Samples
+
+Runnable end-to-end examples live in [`samples/`](samples):
+
+```bash
+./gradlew :samples:run   # writes report.xlsx, letter.docx, deck.pptx to samples/build/sample-output
+```
 
 ## Building
 
