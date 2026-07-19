@@ -1,0 +1,17 @@
+[versions]
+kotlin = "2.4.10"
+poi = "5.5.1"
+# JUnit 5.x line: the last one that runs on Java 11, matching the library's baseline.
+junit = "5.14.4"
+junit-platform = "1.14.4"
+log4j = "2.26.1"
+
+[libraries]
+poi-core = { module = "org.apache.poi:poi", version.ref = "poi" }
+poi-ooxml = { module = "org.apache.poi:poi-ooxml", version.ref = "poi" }
+junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit" }
+junit-launcher = { module = "org.junit.platform:junit-platform-launcher", version.ref = "junit-platform" }
+log4j-core = { module = "org.apache.logging.log4j:log4j-core", version.ref = "log4j" }
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
