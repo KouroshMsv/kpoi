@@ -73,3 +73,15 @@ if (providers.gradleProperty("signing.gnupg.keyName").isPresent) {
         useGpgCmd()
     }
 }
+
+dokka {
+    moduleName.set("kpoi-spreadsheet")
+    dokkaSourceSets.configureEach {
+        includes.from("Module.md")
+        sourceLink {
+            localDirectory.set(file("src/main/kotlin"))
+            remoteUrl("https://github.com/KouroshMsv/kpoi/blob/main/kpoi-spreadsheet/src/main/kotlin")
+            remoteLineSuffix.set("#L")
+        }
+    }
+}

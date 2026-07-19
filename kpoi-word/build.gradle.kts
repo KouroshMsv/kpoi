@@ -72,3 +72,15 @@ if (providers.gradleProperty("signing.gnupg.keyName").isPresent) {
         useGpgCmd()
     }
 }
+
+dokka {
+    moduleName.set("kpoi-word")
+    dokkaSourceSets.configureEach {
+        includes.from("Module.md")
+        sourceLink {
+            localDirectory.set(file("src/main/kotlin"))
+            remoteUrl("https://github.com/KouroshMsv/kpoi/blob/main/kpoi-word/src/main/kotlin")
+            remoteLineSuffix.set("#L")
+        }
+    }
+}
