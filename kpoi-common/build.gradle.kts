@@ -34,11 +34,23 @@ publishing {
             pom {
                 name = "kpoi-common"
                 description = "Shared DSL infrastructure for kpoi, a Kotlin DSL for Apache POI"
+                url = "https://github.com/KouroshMsv/kpoi"
                 licenses {
                     license {
                         name = "The Apache License, Version 2.0"
                         url = "https://www.apache.org/licenses/LICENSE-2.0.txt"
                     }
+                }
+                developers {
+                    developer {
+                        id = "KouroshMsv"
+                        name = "Kourosh"
+                    }
+                }
+                scm {
+                    url = "https://github.com/KouroshMsv/kpoi"
+                    connection = "scm:git:https://github.com/KouroshMsv/kpoi.git"
+                    developerConnection = "scm:git:git@github.com:KouroshMsv/kpoi.git"
                 }
             }
         }

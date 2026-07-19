@@ -3,7 +3,7 @@ plugins {
 }
 
 allprojects {
-    // TODO: change to io.github.<your-github-username> before publishing to Maven Central.
-    group = "dev.kpoi"
+    // Maven Central namespace, verified through the KouroshMsv GitHub account.
+    group = "io.github.kouroshmsv"
     version = "0.1.0-SNAPSHOT"
 }

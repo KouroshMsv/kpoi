@@ -1,5 +1,8 @@
 # kpoi — a Kotlin DSL for Apache POI
 
+[![build](https://github.com/KouroshMsv/kpoi/actions/workflows/build.yml/badge.svg)](https://github.com/KouroshMsv/kpoi/actions/workflows/build.yml)
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
+
 Type-safe, concise Kotlin builders for the three big [Apache POI](https://poi.apache.org/) document
 families: **Excel** (XSSF / SXSSF / HSSF), **Word** (XWPF), and **PowerPoint** (XSLF).
 
@@ -58,9 +61,9 @@ Not yet on Maven Central — for now, build locally:
 repositories { mavenLocal(); mavenCentral() }
 
 dependencies {
-    implementation("dev.kpoi:kpoi-spreadsheet:0.1.0-SNAPSHOT")
-    implementation("dev.kpoi:kpoi-word:0.1.0-SNAPSHOT")
-    implementation("dev.kpoi:kpoi-slides:0.1.0-SNAPSHOT")
+    implementation("io.github.kouroshmsv:kpoi-spreadsheet:0.1.0-SNAPSHOT")
+    implementation("io.github.kouroshmsv:kpoi-word:0.1.0-SNAPSHOT")
+    implementation("io.github.kouroshmsv:kpoi-slides:0.1.0-SNAPSHOT")
 }
 ```
 
