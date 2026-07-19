@@ -2,6 +2,7 @@
 
 [![build](https://github.com/KouroshMsv/kpoi/actions/workflows/build.yml/badge.svg)](https://github.com/KouroshMsv/kpoi/actions/workflows/build.yml)
 [![Maven Central](https://img.shields.io/maven-central/v/io.github.kouroshmsv/kpoi-spreadsheet)](https://central.sonatype.com/search?namespace=io.github.kouroshmsv)
+[![Apache POI](https://img.shields.io/badge/Apache_POI-5.5.1-blue)](https://poi.apache.org/)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 
 Type-safe, concise Kotlin builders for the three big [Apache POI](https://poi.apache.org/) document
@@ -47,11 +48,15 @@ version. Since raw POI is always exposed, nothing the DSL doesn't cover can bloc
 
 Each module only pulls in what it needs; depend on the ones you use.
 
-## Requirements
+## Compatibility
 
-- Java 11+ (CI builds on 17 and 21)
-- Apache POI 5.5.1 (declared transitively)
-- Kotlin 2.x
+| kpoi  | Apache POI | Java baseline | Kotlin |
+|-------|------------|---------------|--------|
+| 0.1.x | 5.5.1      | 11+           | 2.x    |
+
+Each kpoi release is built and tested against exactly the [Apache POI](https://poi.apache.org/)
+version above (CI runs on JDK 17 and 21). POI is exposed as an `api` dependency, so forcing a
+newer 5.x patch in your own build usually works — but the table is what CI actually verifies.
 
 ## Installation
 
@@ -185,6 +190,14 @@ Runnable end-to-end examples live in [`samples/`](samples):
 ./gradlew build
 ```
 
+## Support
+
+- kpoi bugs and feature requests: [GitHub issues](https://github.com/KouroshMsv/kpoi/issues) —
+  please include the kpoi/POI versions and a minimal snippet.
+- Questions about POI itself (file formats, behavior of the underlying API): the
+  [POI components guide](https://poi.apache.org/components/) and
+  [POI mailing lists](https://poi.apache.org/mailinglists.html) are the best places.
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md). Bug reports and small, focused PRs are welcome.
@@ -195,3 +208,6 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). Bug reports and small, focused PRs are w
 
 Apache POI and the POI logo are trademarks of [The Apache Software Foundation](https://www.apache.org/).
 This project is not affiliated with or endorsed by the ASF.
+
+Built on [Apache POI](https://poi.apache.org/); developed with help from
+[Claude Code](https://claude.com/claude-code).
