@@ -4,7 +4,24 @@ updates:
     directory: /
     schedule:
       interval: weekly
+    groups:
+      # Batch routine bumps into a single PR; Apache POI stays a standalone PR
+      # because bumping it also requires updating the README compatibility
+      # table and badge, and re-verifying the DSL against the new POI.
+      gradle-dependencies:
+        patterns: ["*"]
+        exclude-patterns: ["org.apache.poi:*"]
+    ignore:
+      # The library targets Java 11; JUnit 6 requires Java 17, so stay on 5.x/1.x.
+      - dependency-name: "org.junit.jupiter:*"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "org.junit.platform:*"
+        update-types: ["version-update:semver-major"]
+
   - package-ecosystem: github-actions
     directory: /
     schedule:
-      interval: weekly
+      interval: monthly
+    groups:
+      github-actions:
+        patterns: ["*"]
